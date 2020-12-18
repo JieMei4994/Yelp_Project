@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>YOUR TITLE HERE</title>
-  <meta name="description" content="YOUR TITLE HERE" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>Yelp Analysis</title>
+  <meta name="description" content="Yelp Analysis" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="YOUR TITLE HERE" />
+  <meta property="og:title" content="Yelp Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,15 +16,15 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Yelp Analysis" />
   
   
   
 
-<meta name="author" content="YOUR NAMES HERE" />
+<meta name="author" content="Jie Mei, Liuxin Chen, Ningxin Li, Yihui Hu" />
 
 
-<meta name="date" content="2020-11-09" />
+<meta name="date" content="2020-12-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 
 <link rel="next" href="data-sources.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,7 +51,18 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
 
 
 
@@ -72,11 +83,38 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
-<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#discription"><i class="fa fa-check"></i><b>2.1</b> Discription:</a></li>
+<li class="chapter" data-level="2.2" data-path="data-sources.html"><a href="data-sources.html#basic-information"><i class="fa fa-check"></i><b>2.2</b> Basic Information:</a></li>
+<li class="chapter" data-level="2.3" data-path="data-sources.html"><a href="data-sources.html#problems"><i class="fa fa-check"></i><b>2.3</b> Problems:</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#read-data"><i class="fa fa-check"></i><b>3.1</b> read data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#change-formats"><i class="fa fa-check"></i><b>3.2</b> change formats</a></li>
+<li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html#deal-with-categories"><i class="fa fa-check"></i><b>3.3</b> Deal with categories</a></li>
+<li class="chapter" data-level="3.4" data-path="data-transformation.html"><a href="data-transformation.html#deal-with-attributes"><i class="fa fa-check"></i><b>3.4</b> Deal with attributes</a></li>
+<li class="chapter" data-level="3.5" data-path="data-transformation.html"><a href="data-transformation.html#output-cleaned-data"><i class="fa fa-check"></i><b>3.5</b> Output cleaned data</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
-<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
-<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#spatial-data-analysis"><i class="fa fa-check"></i><b>5.1</b> Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="results.html"><a href="results.html#whole-dataset"><i class="fa fa-check"></i><b>5.1.1</b> Whole Dataset</a></li>
+<li class="chapter" data-level="5.1.2" data-path="results.html"><a href="results.html#arizona-dataset"><i class="fa fa-check"></i><b>5.1.2</b> Arizona Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#time-analysis"><i class="fa fa-check"></i><b>5.2</b> Time Analysis</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#yelp-rating-analysis"><i class="fa fa-check"></i><b>5.3</b> Yelp Rating Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#restaurant-services-and-attribute-analysis"><i class="fa fa-check"></i><b>5.4</b> Restaurant Services and Attribute Analysis</a></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#covid-impact-analysis"><i class="fa fa-check"></i><b>5.5</b> Covid Impact Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="interactive-component.html"><a href="interactive-component.html#shiny-app-word-cloud-for-yelp-key-words"><i class="fa fa-check"></i><b>6.1</b> Shiny App: Word Cloud for Yelp Key Words</a></li>
+<li class="chapter" data-level="6.2" data-path="interactive-component.html"><a href="interactive-component.html#shiny-app-change-the-sorting-method-for-rating-distribution"><i class="fa fa-check"></i><b>6.2</b> Shiny App: Change the Sorting Method for Rating Distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -89,7 +127,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Yelp Analysis</a>
           </h1>
         </div>
 
@@ -98,12 +136,19 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">YOUR TITLE HERE</h1>
-<p class="author"><em>YOUR NAMES HERE</em></p>
-<p class="date"><em>2020-11-09</em></p>
+<h1 class="title">Yelp Analysis</h1>
+<p class="author"><em>Jie Mei, Liuxin Chen, Ningxin Li, Yihui Hu</em></p>
+<p class="date"><em>2020-12-18</em></p>
 </div>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>Yelp is an American public company headquartered in San Francisco, California. It is also the most famous mobile app, which contains basic information, ratings, pictures, order service, comments, etc. for shops mostly in US, Canada and Mexico.</p>
+<p>In 2020, due to the epidemic, the opening and closing times, delivery services, and availability of reservation for many restaurants have all changed. We hope to build a platform to facilitate users to have an overall understanding of the restaurant situation in the United States, especially New York, and hope to get some insights during the data processing.</p>
+<p>While our platform mainly displays geographic data, it also combines some charts to provide users with more detailed information.</p>
+<p>Here are what you can get from our platform.
+1. Geographical distribution of yelp restaurants in USA filtered by different categories.
+2. Covid information of yelp restaurants.
+3. Ratings distribution of yelp restaurants in USA.</p>
 
 </div>
             </section>

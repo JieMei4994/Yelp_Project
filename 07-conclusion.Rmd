@@ -1,2 +1,11 @@
 # Conclusion
 
+As we discussed in previous sections, there are many limitations in our analysis due to problems within the dataset and technical issues. The data we obtained is heavily imbalanced: it focuses on collectinhg large number of data from a few States. Moreover, many variables have too many missing values, some of which are essential to our analysis. We had to omit them all in the end and unable to draw inderences from them. Lastly, we encountered technical issues when deploying our interactive image from Shiny. We only got the static images in the end.
+
+Followings are our future directions:
+
+1. We may want to fix the imbalance issues of the data over States in the future. We may either analyze the States with large number of observations or try to find more data from other sources on other States to compare restaurants characteristics over different States.
+
+2. We found that restaurant opening and closing time differ over locations and types of food they serve. We may want to create an interactive plot using D3 or Shiny to show this relationship.
+
+3. Since the nCovid-19 is still an ongoing pandemic, we are interested on future data from Yelp when the pandemic is over. We are interested in: whether the restaurants closed during the pandemic, ratings on delivery APPs during the pandemic, etc.

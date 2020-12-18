@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Data transformation | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 3 Data transformation | YOUR TITLE HERE" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>Chapter 3 Data transformation | Yelp Analysis</title>
+  <meta name="description" content="Chapter 3 Data transformation | Yelp Analysis" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Data transformation | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 3 Data transformation | Yelp Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,15 +16,15 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data transformation | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 3 Data transformation | Yelp Analysis" />
   
   
   
 
-<meta name="author" content="YOUR NAMES HERE" />
+<meta name="author" content="Jie Mei, Liuxin Chen, Ningxin Li, Yihui Hu" />
 
 
-<meta name="date" content="2020-11-09" />
+<meta name="date" content="2020-12-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="data-sources.html"/>
 <link rel="next" href="missing-values.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,7 +51,18 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+<script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+<script src="libs/wordcloud2-0.0.1/hover.js"></script>
+<script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
 
 
 
@@ -72,11 +83,38 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
-<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#discription"><i class="fa fa-check"></i><b>2.1</b> Discription:</a></li>
+<li class="chapter" data-level="2.2" data-path="data-sources.html"><a href="data-sources.html#basic-information"><i class="fa fa-check"></i><b>2.2</b> Basic Information:</a></li>
+<li class="chapter" data-level="2.3" data-path="data-sources.html"><a href="data-sources.html#problems"><i class="fa fa-check"></i><b>2.3</b> Problems:</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#read-data"><i class="fa fa-check"></i><b>3.1</b> read data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#change-formats"><i class="fa fa-check"></i><b>3.2</b> change formats</a></li>
+<li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html#deal-with-categories"><i class="fa fa-check"></i><b>3.3</b> Deal with categories</a></li>
+<li class="chapter" data-level="3.4" data-path="data-transformation.html"><a href="data-transformation.html#deal-with-attributes"><i class="fa fa-check"></i><b>3.4</b> Deal with attributes</a></li>
+<li class="chapter" data-level="3.5" data-path="data-transformation.html"><a href="data-transformation.html#output-cleaned-data"><i class="fa fa-check"></i><b>3.5</b> Output cleaned data</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
-<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
-<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#spatial-data-analysis"><i class="fa fa-check"></i><b>5.1</b> Spatial Data Analysis</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="results.html"><a href="results.html#whole-dataset"><i class="fa fa-check"></i><b>5.1.1</b> Whole Dataset</a></li>
+<li class="chapter" data-level="5.1.2" data-path="results.html"><a href="results.html#arizona-dataset"><i class="fa fa-check"></i><b>5.1.2</b> Arizona Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#time-analysis"><i class="fa fa-check"></i><b>5.2</b> Time Analysis</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#yelp-rating-analysis"><i class="fa fa-check"></i><b>5.3</b> Yelp Rating Analysis</a></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#restaurant-services-and-attribute-analysis"><i class="fa fa-check"></i><b>5.4</b> Restaurant Services and Attribute Analysis</a></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#covid-impact-analysis"><i class="fa fa-check"></i><b>5.5</b> Covid Impact Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="interactive-component.html"><a href="interactive-component.html#shiny-app-word-cloud-for-yelp-key-words"><i class="fa fa-check"></i><b>6.1</b> Shiny App: Word Cloud for Yelp Key Words</a></li>
+<li class="chapter" data-level="6.2" data-path="interactive-component.html"><a href="interactive-component.html#shiny-app-change-the-sorting-method-for-rating-distribution"><i class="fa fa-check"></i><b>6.2</b> Shiny App: Change the Sorting Method for Rating Distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -89,7 +127,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Yelp Analysis</a>
           </h1>
         </div>
 
@@ -99,7 +137,122 @@
             <section class="normal" id="section-">
 <div id="data-transformation" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Data transformation</h1>
+<div id="read-data" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> read data</h2>
+<pre><code>yelp_business_data &lt;- jsonlite::stream_in(file(&quot;data/yelp_academic_dataset_business.json&quot;))</code></pre>
+</div>
+<div id="change-formats" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> change formats</h2>
+<p>Extracted the time table and put it back to the original dataset.
+Transformed all the character columns into factors except categories column.
+Extracted the attributes table as a new dataset, and deleted the attributes table and opening hours table.</p>
+<pre><code>yelp_business_data$Monday &lt;- yelp_business_data$hours$Monday...
+yelp_business_data$city &lt;- factor(yelp_business_data$city)...
+yelp_business_attribute &lt;- yelp_business_data[,12]
+yelp_business_data &lt;- yelp_business_data[,c(-12,-14)]</code></pre>
+<p>Extracted time information from character.
+Changed the opening hours of one column to two separate columns in order to capture the data more easily.</p>
+<pre><code>yelp_business_data$monday1 &lt;- str_extract(yelp_business_data$Monday,&#39;^[0-9]+:[0-9]+&#39;)
+yelp_business_data$monday2 &lt;- str_extract(yelp_business_data$Monday,&#39;[0-9]+:[0-9]+$&#39;)...
+yelp_business_data &lt;- yelp_business_data[,-c(13:19)]</code></pre>
+<p>Transformed the character into date type.</p>
+<pre><code>yelp_business_data$monday1 &lt;- strptime(yelp_business_data$monday1,&#39;%H:%M&#39;)...
+yelp_business_data$categories &lt;- tolower(yelp_business_data$categories)</code></pre>
+</div>
+<div id="deal-with-categories" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Deal with categories</h2>
+<p>Filtered the dataset by applying if there is a ‘restaurant’ in the categories.
+Deleted some rows with ‘restaurant’, but not what we want.</p>
+<pre><code>cate &lt;- strsplit(yelp_business_data$categories,&#39;,&#39;)
+match = &#39;restaurants&#39;
+boolean1 &lt;- grepl(match,cate)
+yelp_restaurant &lt;- yelp_business_data[boolean1,]</code></pre>
+<pre><code>cate &lt;- strsplit(yelp_restaurant$categories,&#39;,&#39;)
+match2 = &#39;shopping&#39;
+boolean2 &lt;- grepl(match2,cate)
+yelp_restaurant &lt;- yelp_restaurant[!boolean2,]</code></pre>
+<pre><code>yelp_restaurant &lt;- subset(yelp_restaurant,!is.na(yelp_restaurant$business_id))
+yelp_restaurant$categories &lt;- gsub(&#39;restaurants[,]*&#39;,&#39;&#39;,yelp_restaurant$categories)
+yelp_restaurant$categories &lt;- gsub(&#39;food[,]*&#39;,&#39;&#39;,yelp_restaurant$categories)</code></pre>
+<p>Extracted words from categories.</p>
+<pre><code>cate &lt;- strsplit(yelp_restaurant$categories,&#39;,|&amp;|[)]|[(]|[ ]|/&#39;)
+yelp_restaurant1$categories &lt;- substr(cate,2,1000)</code></pre>
+<p>Word cloud of cleaned categories.</p>
+<pre><code>text&lt;-yelp_restaurant1$categories
+mixseg&lt;-worker(&quot;mix&quot;) 
+a&lt;-segment(text,mixseg)
+stopwords &lt;- read.table(&quot;stopwords.txt&quot;)
+stopwords &lt;- as.vector(stopwords[,1]) 
+wordResult &lt;- removeWords(a,stopwords)
+freq&lt;-table(wordResult)
+wordcloud2(freq,size=5)</code></pre>
+<div id="htmlwidget-6027b18de84b8e4afd15" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6027b18de84b8e4afd15">{"x":{"word":["","acai","afghan","african","american","arabian","argentine","armenian","asian","australian","austrian","bagels","bakeries","bangladeshi","bar","barbeque","bars","basque","beer","belgian","beverage","bistros","bowls","brasseries","brazilian","breakfast","breweries","brewpubs","british","brunch","buffets","bulgarian","burgers","burmese","cafe","cafes","cafeteria","cajun","cake","cakes","calabrian","cambodian","canadian","candy","cantonese","caribbean","catalan","champagne","cheesesteaks","chicken","chinese","chips","chocolatiers","churros","cideries","cocktail","coffee","coffeeshops","cream","creole","creperies","cuban","cupcakes","czech","delicatessen","delis","delivery","desserts","dim","dinner","distilleries","dominican","donairs","donuts","dumplings","egyptian","empanadas","eritrean","ethiopian","falafel","filipino","fish","fondue","french","fruits","gastropubs","german","greek","guamanian","halal","haracter","hawaiian","hungarian","iberian","ice","imported","indian","indonesian","iranian","irish","italian","izakaya","japanese","juice","junk","kebab","kombucha","korean","kosher","latin","lebanese","local","macarons","malaysian","mauritius","meat","mediterranean","mexican","middle","mongolian","moroccan","nepalese","nicaraguan","noodles","organic","pakistani","pancakes","pasta","patisserie","persian","pita","pizza","poke","polynesian","popcorn","pot","poutineries","pretzels","pub","pubs","puerto","ramen","rican","roasteries","rotisserie","russian","salad","salvadoran","sandwiches","scandinavian","scottish","senegalese","sicilian","singaporean","slovakian","smoothies","soup","spanish","speakeasies","sri","steakhouses","sugar","sushi","swiss","syrian","szechuan","tacos","taiwanese","tapas","tea","tempura","teppanyaki","thai","trinidadian","turkish","tuscan","udon","ukrainian","uzbek","vegan","vegetarian","veggies","venezuelan","vietnamese","waffles","whiskey","wine","yogurt"],"freq":[83738,78,144,181,12753,73,56,11,2264,11,8,470,1924,27,404,1942,16684,30,1558,52,15,175,78,139,97,6146,284,71,155,6089,903,1,5998,13,27,3491,46,315,118,79,1,46,1915,27,132,689,1,9,240,3667,4709,339,78,1,4,1113,4253,4,1149,315,291,85,69,7,99,2003,806,1947,332,7,6,17,68,351,34,21,17,2,87,157,261,340,54,1058,69,579,106,1132,2,721,222,361,33,5,1227,298,1639,30,205,279,4918,27,2981,1081,1,102,2,1021,144,646,284,375,24,78,2,206,1984,5235,1433,52,76,73,3,604,75,512,9,112,118,205,2,7145,206,2,6,146,222,46,97,1469,33,316,33,111,2,58,2956,81,7953,12,4,2,4,32,5,1081,986,199,19,47,1638,8,2444,2,18,102,858,267,972,4647,1,39,1541,5,154,5,1,26,4,1003,1258,69,41,1396,147,43,2102,1149],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.0107478086412381,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<p>Deeper cleaning and merging of categories.</p>
+<pre><code>yelp_restaurant1$categories &lt;- gsub(&#39;&quot;veggies&quot;|&quot;vegetarian&quot;&#39;,&#39;&quot;vegan&quot;&#39;,yelp_restaurant1$categories)...
+yelp_restaurant1$categories &lt;- gsub(&#39;[(]|[&quot;]|[)]|[,]&#39;,&#39;&#39;,yelp_restaurant1$categories)</code></pre>
+<p>Extracted unique word for each row.</p>
+<pre><code>cate &lt;- strsplit(yelp_restaurant1$categories,&#39; &#39;)
+for (i in 1:nrow(yelp_restaurant1)) {yelp_restaurant1$categories[i] &lt;- str_c(unique(cate[[i]]),collapse=&#39; &#39;)}</code></pre>
+<p>Word cloud about cuisine.</p>
+<pre><code>text1&lt;-yelp_restaurant1$categories
+mixseg1&lt;-worker(&quot;mix&quot;) 
+b&lt;-segment(text1,mixseg1) 
+wordResult1 &lt;- removeWords(b,stopwords)
+new_list &lt;- c(&#39;acai&#39;,&#39;alcohol&#39;,&#39;barbeque&#39;,&#39;breakfast&#39;,&#39;brunch&#39;,&#39;buffets&#39;,&#39;delivery&#39;,&#39;desserts&#39;,&#39;dinner&#39;,&#39;drinks&#39;,&#39;flourfood&#39;,&#39;fruits&#39;,&#39;imported&#39;,&#39;local&#39;,&#39;organic&#39;,&#39;salad&#39;,&#39;vegan&#39;,&#39;meat&#39;,&#39;kosher&#39;)
+wordDraw &lt;- removeWords(wordResult1,new_list)
+freq1&lt;-table(wordDraw)
+wordcloud2(freq1,size=12)</code></pre>
+<div id="htmlwidget-9667e5ae551f607b625e" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9667e5ae551f607b625e">{"x":{"word":["","afghan","african","american","arabian","argentine","armenian","asian","australian","austrian","bangladeshi","basque","belgian","brazilian","british","burmese","cajun","cambodian","canadian","caribbean","chinese","creole","cuban","czech","dominican","egyptian","ethiopian","filipino","french","german","greek","halal","hawaiian","hungarian","indian","indonesian","iranian","irish","italian","japanese","korean","latin","lebanese","malaysian","mediterranean","mexican","middleeastern","mongolian","moroccan","nepalese","othercountries","pakistani","persian","puerto","russian","salvadoran","scandinavian","singaporean","spanish","sri","syrian","thai","turkish","ukrainian","venezuelan","vietnamese"],"freq":[155805,144,157,11390,73,56,11,2215,11,8,27,30,52,97,155,13,315,46,1915,689,4961,315,85,6,17,21,87,261,1274,149,1132,721,361,33,1639,30,205,217,4918,3828,1021,646,284,78,1984,5166,1433,52,76,73,49,512,205,33,58,81,12,32,995,47,18,1541,154,26,41,1396],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":0.013863483200154,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<p>Cuisine countries.</p>
+<pre><code>## wordDraw
+##                        afghan        african       american        arabian      argentine       armenian 
+##         155805            144            157          11390             73             56             11 
+##          asian     australian       austrian    bangladeshi         basque        belgian      brazilian 
+##           2215             11              8             27             30             52             97 
+##        british        burmese          cajun      cambodian       canadian      caribbean        chinese 
+##            155             13            315             46           1915            689           4961 
+##         creole          cuban          czech      dominican       egyptian      ethiopian       filipino 
+##            315             85              6             17             21             87            261 
+##         french         german          greek          halal       hawaiian      hungarian         indian 
+##           1274            149           1132            721            361             33           1639 
+##     indonesian        iranian          irish        italian       japanese         korean          latin 
+##             30            205            217           4918           3828           1021            646 
+##       lebanese      malaysian  mediterranean        mexican  middleeastern      mongolian       moroccan 
+##            284             78           1984           5166           1433             52             76 
+##       nepalese othercountries      pakistani        persian         puerto        russian     salvadoran 
+##             73             49            512            205             33             58             81 
+##   scandinavian    singaporean        spanish            sri         syrian           thai        turkish 
+##             12             32            995             47             18           1541            154 
+##      ukrainian     venezuelan     vietnamese 
+##             26             41           1396</code></pre>
+<p>Delete rows without these categories.</p>
+<pre><code>wordResult1 = wordResult1[wordResult1 != &#39;&#39;]
+exist_cate &lt;- str_c(wordResult1,collapse=&#39;|&#39;)
+boolean_cate &lt;- str_detect(yelp_restaurant1$categories,exist_cate)
+yelp_restaurant1 &lt;- yelp_restaurant1[boolean_cate,]</code></pre>
+<p>Added a new column for cuisine countries.</p>
+<pre><code>k &lt;- names(freq1)
+country &lt;- str_c(k[-1],collapse=&#39;|&#39;)
+yelp_restaurant1$country &lt;- str_match_all(yelp_restaurant1$categories,country)
+yelp_restaurant1$country &lt;- gsub(&#39;c[(]+|[)]+|[&quot;]&#39;,&#39;&#39;,yelp_restaurant1$country)
+yelp_restaurant1$country &lt;- gsub(&#39;[&quot;, &quot;]&#39;,&#39; &#39;,yelp_restaurant1$country)
+yelp_restaurant1$country[yelp_restaurant1$country == &#39;character(0&#39;] = NA</code></pre>
+<p>Added new columns for categories.</p>
+<pre><code>yelp_restaurant1$acai &lt;- ifelse(str_detect(yelp_restaurant1$categories,&quot;acai&quot;),1,0)...</code></pre>
+<pre><code>yelp_restaurant1 &lt;- yelp_restaurant1[,-grep(&#39;categories&#39;,colnames(yelp_restaurant1))]</code></pre>
+</div>
+<div id="deal-with-attributes" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Deal with attributes</h2>
+<pre><code>yelp_restaurant1$credit &lt;- str_detect(yelp_restaurant1$credit,&quot;True&quot;)
+yelp_restaurant1$attire &lt;- gsub(&quot;u[&#39;]+|[&#39;]&quot;,&#39;&#39;,yelp_restaurant1$attire)...</code></pre>
+</div>
+<div id="output-cleaned-data" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Output cleaned data</h2>
+<pre><code>write.csv(x = yelp_restaurant1,file = &quot;yelp_cleaned_data.csv&quot;)</code></pre>
 
+</div>
 </div>
             </section>
 
